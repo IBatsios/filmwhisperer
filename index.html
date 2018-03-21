@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Film Whisperer Productions</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="container">
+		<div id="header">
+			<nav>
+				<img class="logo" src="img/cropped-headernew.jpg">
+				<ul>
+					<a href="#header"><li>Home</li></a>
+					<a href="#about"><li>About Us</li></a>
+					<a href="#clients"><li>Clients</li></a>
+					<a href="#portfolio"><li>Portfolio</li></a>
+					<a href="#contact" role="button" data-toggle="modal" id="myBtn"><li>Contact Us</li></a>
+				</ul>
+			</nav>
+			<div id="video-container">
+				<video src="assets/videos/demo_reel.mov" autoplay="true" loop="true" muted></video>
+			</div>
+		</div>
+		<div id="contact" class="modal modal-content">
+			<span class="close">&times;</span>
+			<form class="form-horizontal col-sm-12">
+          		<div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
+          		<div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea></div>
+          		<div class="form-group"><label>E-Mail</label><input class="form-control email" placeholder="email@you.com (so that we can contact you)" data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" type="text"></div>
+          		<div class="form-group"><label>Phone</label><input class="form-control phone" placeholder="999-999-9999" data-placement="top" data-trigger="manual" data-content="Must be a valid phone number (999-999-9999)" type="text"></div>
+          		<div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p></div>
+        	</form>
+		</div>
+		<div id="about">
+			<h1>About Us</h1>
+			<p>We are a full-service video production company based in Greensboro NC, with clients across the United States.</p>
+			<p>Our clients include: Golf Channel, Club Car, Stanley Furniture, Furniture Today, Mission Health Systems, a locally-based international transportation company as well as local and regional businesses and individuals.</p>
+			<p>We bring a cinematic approach to our work and approach each new project with the care and attention to detail afforded to a blockbuster movie.</p>
+			<p>We offer the whole range of services every production needs: writing, producing, directing, shooting, editing and effects. We gladly collaborate with our clients or can take an idea and shape it on our own.</p>
+			<p>Need motion graphics? We can do that, too. The perfect placement of a 3D graphic or logo can be just the right touch to set your video apart from the competition.</p>
+			<p>In addition to our productions services, we also offer training for your in-house video crew. Need to get caught up on newer technology or software advances? We can show you how to maximize the gear and applications you use.</p>
+			<p>We use Apple computers, Final Cut Pro, Adobe Creative Suite and over 25 years of experience to create exceptional content for you.</p>
+		</div>
+		<div id="clients">
+			<div class="row">
+				<div class="column">
+					<img src="img/clients/stanley_furniture.jpg">
+					<img src="img/clients/club_car.jpg">
+					<img src="img/clients/Golf_Channel.png">
+					<img src="img/clients/mission_health.jpg">
+					<img src="img/clients/furniture_today.png">
+				</div>	
+			</div>
+		</div>
+		<div id="portfolio"></div>
+		<footer></footer>
+	</div>
+
+	<script>
+// Get the modal
+var modal = document.getElementById('contact');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>
